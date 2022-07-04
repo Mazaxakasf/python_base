@@ -1,3 +1,5 @@
+# Решено
+
 # Есть словарь координат городов
 
 from pprint import pprint
