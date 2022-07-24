@@ -68,26 +68,27 @@ import simple_draw as sd
 # point = sd.get_point(400, 150)
 # square(point=point, angle=10, length=100)
 
-def figure(point, angle=0, angle_l=0, length=100, i=1):
-    for vector in range(i):
+# создаем функцию с параметрами точка начала, угол наклона, радиус угла, длина и колво линий
+def figure(point, angle=0, angle_l=0, length=100, number_line=1):
+    for vector in range(number_line): # создает вектор из количества линий
         vector = sd.get_vector(start_point=point, angle=angle, length=length)
         vector.draw()
-        angle = angle + angle_l
-        point = vector.end_point
+        angle = angle + angle_l # угол наклона + угол
+        point = vector.end_point # рисует сл линию с конца предыдущей
 
 
 
-point = sd.get_point(100, 350)
-figure(point=point, angle=0, angle_l=72, i=5)
+point = sd.get_point(100, 350) # точка начала
+figure(point=point, angle=10, angle_l=72, number_line=5)  # вызываем функцию
 
 point = sd.get_point(400, 350)
-figure(point=point, angle=0, angle_l=60, i=6)
+figure(point=point, angle=10, angle_l=60, number_line=6)
 
 point = sd.get_point(100, 150)
-figure(point=point, angle=0, angle_l=120, i=3)
+figure(point=point, angle=10, angle_l=120, number_line=3)
 
 point = sd.get_point(400, 150)
-figure(point=point, angle=0, angle_l=90, i=4)
+figure(point=point, angle=10, angle_l=90, number_line=4)
 
 
 
