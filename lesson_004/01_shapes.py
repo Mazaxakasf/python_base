@@ -1,5 +1,6 @@
 import simple_draw as sd
 
+
 # Часть 1.
 # Написать функции рисования равносторонних геометрических фигур:
 # - треугольника
@@ -25,7 +26,72 @@ import simple_draw as sd
 # sd.line()
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
-# здесь ваш код
+
+# def pentagon(point, angle=0, length=100):
+#     for vector in range(5):
+#         vector = sd.get_vector(start_point=point, angle=angle, length=length)
+#         vector.draw()
+#         angle = angle + 72
+#         point = vector.end_point
+#
+# def hexagon(point, angle=0, length=100):
+#     for vector in range(6):
+#         vector = sd.get_vector(start_point=point, angle=angle, length=length)
+#         vector.draw()
+#         angle = angle + 60
+#         point = vector.end_point
+#
+# def triangle(point, angle=0, length=100):
+#     for vector in range(3):
+#         vector = sd.get_vector(start_point=point, angle=angle, length=length)
+#         vector.draw()
+#         angle = angle + 120
+#         point = vector.end_point
+#
+# def square(point, angle=0, length=100):
+#     for vector in range(4):
+#         vector = sd.get_vector(start_point=point, angle=angle, length=length)
+#         vector.draw()
+#         angle = angle + 90
+#         point = vector.end_point
+#
+#
+# point = sd.get_point(100, 350)
+# pentagon(point=point, angle=10, length=100)
+#
+# point = sd.get_point(400, 350)
+# hexagon(point=point, angle=10, length=100)
+#
+# point = sd.get_point(100, 150)
+# triangle(point=point, angle=10, length=100)
+#
+# point = sd.get_point(400, 150)
+# square(point=point, angle=10, length=100)
+
+def figure(point, angle=0, angle_l=0, length=100, i=1):
+    for vector in range(i):
+        vector = sd.get_vector(start_point=point, angle=angle, length=length)
+        vector.draw()
+        angle = angle + angle_l
+        point = vector.end_point
+
+
+
+point = sd.get_point(100, 350)
+figure(point=point, angle=0, angle_l=72, i=5)
+
+point = sd.get_point(400, 350)
+figure(point=point, angle=0, angle_l=60, i=6)
+
+point = sd.get_point(100, 150)
+figure(point=point, angle=0, angle_l=120, i=3)
+
+point = sd.get_point(400, 150)
+figure(point=point, angle=0, angle_l=90, i=4)
+
+
+
+
 
 # Часть 1-бис.
 # Попробуйте прикинуть обьем работы, если нужно будет внести изменения в этот код.
