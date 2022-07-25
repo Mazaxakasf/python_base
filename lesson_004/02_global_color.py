@@ -63,6 +63,4 @@ while True:
 
 
 
-
-
 sd.pause()
