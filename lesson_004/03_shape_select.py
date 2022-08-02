@@ -28,19 +28,19 @@ while True: #обворачиваем код, чтоб после неверно
     if figure_input.isdigit():  # проверяем чтобы были введены только цифры
         figure_input = int(figure_input)  # переводим введенные цифры в int
         if figure_input == 0:
-            figure(point=point, angle=10, angle_l=120, i=3)
+            figure(point=point, angle=10, angle_l=120, number_line=3)
             print('Вы выбрали треугольник')
             break
         elif figure_input == 1:
-            figure(point=point, angle=10, angle_l=90, i=4)
+            figure(point=point, angle=10, angle_l=90, number_line=4)
             print('Вы выбрали квадрат')
             break
         elif figure_input == 2:
-            figure(point=point, angle=10, angle_l=72, i=5)
+            figure(point=point, angle=10, angle_l=72, number_line=5)
             print('Вы выбрали пятиугольник')
             break
         elif figure_input == 3:
-            figure(point=point, angle=10, angle_l=60, i=6)
+            figure(point=point, angle=10, angle_l=60, number_line=6)
             print('Вы выбрали шестиугольник')
             break
         else:

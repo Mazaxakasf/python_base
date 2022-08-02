@@ -26,35 +26,35 @@ colors = {0: ('red', sd.COLOR_RED),
 def figure(point, angle=0, angle_l=0, length=100, number_line=1):
     for vector in range(number_line): # создает вектор из количества линий
         vector = sd.get_vector(start_point=point, angle=angle, length=length)
-        vector.draw()
+        vector.draw(color=colors[color_input][0]) # присваивает введенный цвет
         angle = angle + angle_l # угол наклона + угол
         point = vector.end_point # рисует сл линию с конца предыдущей
 
 print('Возможные цвета:')
-for number_color in (colors):
+for number_color in colors:
     print(number_color, ':', colors[number_color][0])
 
 
 while True:
     color_input = input('Введите желаемый цвет')
 
-    if color_input.isdigit():
+    if color_input.isdigit():  #проверка если будут введины другие символы
         color_input = int(color_input)
-        if color_input in colors:
+        if color_input in colors: # проверка на колство элементов в списке
             point = sd.get_point(100, 350)
-            figure(point=point, angle=0, angle_l=72, i=5)
+            figure(point=point, angle=0, angle_l=72, number_line=5)
 
             point = sd.get_point(100, 350)
-            figure(point=point, angle=0, angle_l=72, i=5)
+            figure(point=point, angle=0, angle_l=72, number_line=5)
 
             point = sd.get_point(400, 350)
-            figure(point=point, angle=0, angle_l=60, i=6)
+            figure(point=point, angle=0, angle_l=60, number_line=6)
 
             point = sd.get_point(100, 150)
-            figure(point=point, angle=0, angle_l=120, i=3)
+            figure(point=point, angle=0, angle_l=120, number_line=3)
 
             point = sd.get_point(400, 150)
-            figure(point=point, angle=0, angle_l=90, i=4)
+            figure(point=point, angle=0, angle_l=90, number_line=4)
             break
         else:
             print('Не верный номер')
